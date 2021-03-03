@@ -41,6 +41,7 @@ const option4 = document.querySelector("#option4");
 const answers = document.querySelectorAll(".answer");
 const submit = document.querySelector("#submit");
 const shoWScore = document.querySelector("#show_score");
+const InnerDiv = document.querySelector(".inner_div");
 
 var questionCount = 0;
 var score = 0;
@@ -88,6 +89,7 @@ submit.addEventListener("click", () => {
     shoWScore.innerHTML = `<h1>Your Score is ${score}/${QuizQA.length}
     <button class="btn" onclick="location.reload()">Start Again</button>`;
     shoWScore.classList.remove("score_area");
+    InnerDiv.style.display = "none";
   }
   console.log(score);
 });
